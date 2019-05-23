@@ -34,7 +34,7 @@ namespace PlayAGame
     class GameNo1
     {
         //序列化操作
-        public static void SerializeMethod(List<Peoson> list)
+        public static void SerializeMethod(List<Person> list)
         {
             using (FileStream fs = new FileStream("序列化.btn",FileMode.Create))
             {
@@ -44,16 +44,22 @@ namespace PlayAGame
             }
         }
         //反序列化操作
-        public static List<Peoson> ReserializeMethod()
+        public static List<Person> ReserializeMethod()
         {
             using (FileStream fs = new FileStream("序列化.btn", FileMode.Open))
             {
 
                 BinaryFormatter bf = new BinaryFormatter();
-                List<Peoson> list = (List<Peoson>)bf.Deserialize(fs);
+                List<Person> list = (List<Person>)bf.Deserialize(fs);
                 return list;
             }
         }
 
+    }
+    class Person
+    {
+        string A { get; set; }
+
+        int B { get; set; }
     }
 }
