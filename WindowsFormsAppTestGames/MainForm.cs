@@ -27,9 +27,9 @@ namespace WindowsFormsAppTestGames
             listView1.Columns.Add("事件");
             listView1.Columns[2].Width = 70;
             listView1.Columns.Add("原文件名");
-            listView1.Columns[3].Width = 150;
+            listView1.Columns[3].Width = 200;
             listView1.Columns.Add("新文件名");
-            listView1.Columns[4].Width = 150;
+            listView1.Columns[4].Width = 200;
             listView1.Columns.Add("原文件路径");
             listView1.Columns[5].Width = 200;
             listView1.Columns.Add("新文件路径");
@@ -72,10 +72,10 @@ namespace WindowsFormsAppTestGames
         }
         private void SetLogText(FileSystemEventArgs e)  //更新UI界面
         {
-            ListViewItem lvi = new ListViewItem();            
+            ListViewItem lvi = new ListViewItem();
             lvi.SubItems.Add(DateTime.Now.ToString());
             lvi.SubItems.Add(e.ChangeType.ToString());   //受影响文件的变动类型(可能为Created、Changed、Deleted）                  
-            lvi.SubItems.Add(e.Name);   //受影响的文件名 
+            lvi.SubItems.Add(e.Name.Substring(e.Name.LastIndexOf("\\") + 1));   //受影响的文件名 
             lvi.SubItems.Add("");
             lvi.SubItems.Add(e.FullPath);     //受影响的文件完整路径   
             lvi.SubItems.Add("");
@@ -86,8 +86,8 @@ namespace WindowsFormsAppTestGames
             ListViewItem lvi = new ListViewItem();
             lvi.SubItems.Add(DateTime.Now.ToString());
             lvi.SubItems.Add(e.ChangeType.ToString());  //受影响的文件的改动类型（Rename）        
-            lvi.SubItems.Add(e.OldName);   //受影响的文件的原名        
-            lvi.SubItems.Add(e.Name);   //受影响的文件的新名        
+            lvi.SubItems.Add(e.OldName.Substring(e.OldName.LastIndexOf("\\") + 1));   //受影响的文件的原名        
+            lvi.SubItems.Add(e.Name.Substring(e.Name.LastIndexOf("\\") + 1));   //受影响的文件的新名        
             lvi.SubItems.Add(e.OldFullPath);     //受影响的文件的原路径        
             lvi.SubItems.Add(e.FullPath);  //受影响的文件的完整路径（其实和原路径一样）        
             this.listView1.Items.Add(lvi);
@@ -97,7 +97,8 @@ namespace WindowsFormsAppTestGames
             btn_Test.Text = "已启动";
             FileSystemWatcher fsw = new FileSystemWatcher
             {
-                Path = ConfigurationManager.AppSettings["WatcherPath"].ToString(),   //设置监控的文件目录 
+                //Path = ConfigurationManager.AppSettings["WatcherPath"].ToString(),   //设置监控的文件目录 
+                Path = txt_Path.Text.ToString(),
                 IncludeSubdirectories = true,   //设置监控C盘目录下的所有子目录 
                                                 //fsw.Filter = "*.txt|*.doc|*.jpg";   //设置监控文件的类型
                 NotifyFilter = NotifyFilters.FileName | NotifyFilters.DirectoryName | NotifyFilters.Size   //设置文件的文件名、目录名及文件的大小改动会触发Changed事件 
@@ -108,6 +109,15 @@ namespace WindowsFormsAppTestGames
             fsw.Renamed += new RenamedEventHandler(this.FileSystemWatcher_Renamed);  //重命名事件与增删改传递的参数不一样。 
             fsw.EnableRaisingEvents = true;  //启动监控 
 
+        }
+
+        private void Btn_selectPath_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog()== DialogResult.OK)
+            {
+                txt_Path.Text = folderBrowserDialog1.SelectedPath;
+                folderBrowserDialog1.Description = "选择监控路径";
+            }
         }
     }
     [Serializable]
