@@ -77,7 +77,11 @@ namespace FilterToolForFiles
                 txt_filesPath.Text = folderBrowserDialog.SelectedPath.ToString();
             }
         }
-       
+
+        private void DataGridView_RowStateChanged(object sender, DataGridViewRowStateChangedEventArgs e)
+        {
+            e.Row.HeaderCell.Value = string.Format("{0}", e.Row.Index + 1);
+        }
     }
     public class FileFilter
     {

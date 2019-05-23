@@ -59,12 +59,12 @@
             // 
             this.txt_standardFile.Location = new System.Drawing.Point(179, 20);
             this.txt_standardFile.Name = "txt_standardFile";
-            this.txt_standardFile.Size = new System.Drawing.Size(333, 28);
+            this.txt_standardFile.Size = new System.Drawing.Size(383, 28);
             this.txt_standardFile.TabIndex = 1;
             // 
             // btn_filter
             // 
-            this.btn_filter.Location = new System.Drawing.Point(534, 20);
+            this.btn_filter.Location = new System.Drawing.Point(587, 20);
             this.btn_filter.Name = "btn_filter";
             this.btn_filter.Size = new System.Drawing.Size(245, 40);
             this.btn_filter.TabIndex = 2;
@@ -86,9 +86,11 @@
             this.data_filterFiles.Location = new System.Drawing.Point(29, 115);
             this.data_filterFiles.Name = "data_filterFiles";
             this.data_filterFiles.ReadOnly = true;
+            this.data_filterFiles.RowHeadersWidth = 62;
             this.data_filterFiles.RowTemplate.Height = 30;
-            this.data_filterFiles.Size = new System.Drawing.Size(750, 510);
+            this.data_filterFiles.Size = new System.Drawing.Size(803, 510);
             this.data_filterFiles.TabIndex = 3;
+            this.data_filterFiles.RowStateChanged += new System.Windows.Forms.DataGridViewRowStateChangedEventHandler(this.DataGridView_RowStateChanged);
             // 
             // btn_filesPath
             // 
@@ -104,7 +106,7 @@
             // 
             this.txt_filesPath.Location = new System.Drawing.Point(179, 70);
             this.txt_filesPath.Name = "txt_filesPath";
-            this.txt_filesPath.Size = new System.Drawing.Size(333, 28);
+            this.txt_filesPath.Size = new System.Drawing.Size(383, 28);
             this.txt_filesPath.TabIndex = 5;
             // 
             // lbl_totalCount
@@ -119,7 +121,7 @@
             // lbl_distance
             // 
             this.lbl_distance.AutoSize = true;
-            this.lbl_distance.Location = new System.Drawing.Point(531, 73);
+            this.lbl_distance.Location = new System.Drawing.Point(584, 73);
             this.lbl_distance.Name = "lbl_distance";
             this.lbl_distance.Size = new System.Drawing.Size(152, 18);
             this.lbl_distance.TabIndex = 7;
@@ -127,7 +129,7 @@
             // 
             // txt_distance
             // 
-            this.txt_distance.Location = new System.Drawing.Point(689, 70);
+            this.txt_distance.Location = new System.Drawing.Point(742, 70);
             this.txt_distance.Name = "txt_distance";
             this.txt_distance.Size = new System.Drawing.Size(90, 28);
             this.txt_distance.TabIndex = 8;
@@ -139,15 +141,17 @@
             this.FileName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FileName.DataPropertyName = "FileName";
             this.FileName.HeaderText = "文件路径";
+            this.FileName.MinimumWidth = 8;
             this.FileName.Name = "FileName";
             this.FileName.ReadOnly = true;
-            this.FileName.Width = 125;
+            this.FileName.Width = 120;
             // 
             // FileCreatedTime
             // 
             this.FileCreatedTime.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FileCreatedTime.DataPropertyName = "FileCreatedTime";
             this.FileCreatedTime.HeaderText = "文件创建时间(BTC)";
+            this.FileCreatedTime.MinimumWidth = 8;
             this.FileCreatedTime.Name = "FileCreatedTime";
             this.FileCreatedTime.ReadOnly = true;
             this.FileCreatedTime.Width = 130;
@@ -157,22 +161,26 @@
             this.FileSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FileSize.DataPropertyName = "FileSize";
             this.FileSize.HeaderText = "文件大小";
+            this.FileSize.MinimumWidth = 8;
             this.FileSize.Name = "FileSize";
             this.FileSize.ReadOnly = true;
+            this.FileSize.Width = 110;
             // 
             // FileStandardSize
             // 
             this.FileStandardSize.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.FileStandardSize.DataPropertyName = "FileStandardSize";
             this.FileStandardSize.HeaderText = "准则文件大小";
+            this.FileStandardSize.MinimumWidth = 8;
             this.FileStandardSize.Name = "FileStandardSize";
             this.FileStandardSize.ReadOnly = true;
+            this.FileStandardSize.Width = 110;
             // 
             // FilterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(809, 679);
+            this.ClientSize = new System.Drawing.Size(867, 679);
             this.Controls.Add(this.txt_distance);
             this.Controls.Add(this.lbl_distance);
             this.Controls.Add(this.lbl_totalCount);
