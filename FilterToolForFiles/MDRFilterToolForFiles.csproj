@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>FilterToolForFiles</RootNamespace>
-    <AssemblyName>FilterToolForFiles</AssemblyName>
+    <RootNamespace>MDRFilterToolForFiles</RootNamespace>
+    <AssemblyName>MDRFilterToolForFiles</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

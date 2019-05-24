@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{11435326-C910-4662-9DB8-7CCD03820522}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>DataClearTool</RootNamespace>
-    <AssemblyName>DataClearTool</AssemblyName>
+    <RootNamespace>MDRDataClearTool</RootNamespace>
+    <AssemblyName>MDRDataClearTool</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -71,6 +71,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
