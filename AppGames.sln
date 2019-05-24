@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsControlLibraryT
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XMLOperationDemo", "XMLOperationDemo\XMLOperationDemo.csproj", "{6710A286-2872-4ED7-9212-0C79034E04BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDRFilterToolForFiles", "FilterToolForFiles\MDRFilterToolForFiles.csproj", "{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NAudioPractice1", "NAudioPractice1\NAudioPractice1.csproj", "{C251F43B-DF78-4E89-BA16-95F6912E28F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MixerVoiceFormsDemo", "MixerVoiceFormsDemo\MixerVoiceFormsDemo.csproj", "{3278B9C4-B2EA-4CE6-95E8-EF4881238E02}"
@@ -26,6 +24,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleFTPDemo", "ConsoleFTPDemo\ConsoleFTPDemo.csproj", "{C3B7DA5B-E6CF-459F-A1EC-57091A240D0E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDRDataClearTool", "DataClearTool\MDRDataClearTool.csproj", "{11435326-C910-4662-9DB8-7CCD03820522}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MDRFilterToolForFiles", "FilterToolForFiles\MDRFilterToolForFiles.csproj", "{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,14 +59,6 @@ Global
 		{6710A286-2872-4ED7-9212-0C79034E04BE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6710A286-2872-4ED7-9212-0C79034E04BE}.Release|x86.ActiveCfg = Release|Any CPU
 		{6710A286-2872-4ED7-9212-0C79034E04BE}.Release|x86.Build.0 = Release|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|x86.Build.0 = Debug|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|x86.ActiveCfg = Release|Any CPU
-		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|x86.Build.0 = Release|Any CPU
 		{C251F43B-DF78-4E89-BA16-95F6912E28F7}.Debug|Any CPU.ActiveCfg = Debug|x86
 		{C251F43B-DF78-4E89-BA16-95F6912E28F7}.Debug|x86.ActiveCfg = Debug|x86
 		{C251F43B-DF78-4E89-BA16-95F6912E28F7}.Debug|x86.Build.0 = Debug|x86
@@ -129,6 +121,14 @@ Global
 		{11435326-C910-4662-9DB8-7CCD03820522}.Release|Any CPU.Build.0 = Release|Any CPU
 		{11435326-C910-4662-9DB8-7CCD03820522}.Release|x86.ActiveCfg = Release|Any CPU
 		{11435326-C910-4662-9DB8-7CCD03820522}.Release|x86.Build.0 = Release|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Debug|x86.Build.0 = Debug|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|x86.ActiveCfg = Release|Any CPU
+		{F71EAA32-9335-4EA0-AE41-8C24E0FD49D2}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
