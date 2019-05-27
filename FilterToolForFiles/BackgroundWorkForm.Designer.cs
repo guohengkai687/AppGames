@@ -54,16 +54,18 @@
             this.lbl_totalFiles.AutoSize = true;
             this.lbl_totalFiles.Location = new System.Drawing.Point(22, 70);
             this.lbl_totalFiles.Name = "lbl_totalFiles";
-            this.lbl_totalFiles.Size = new System.Drawing.Size(0, 18);
+            this.lbl_totalFiles.Size = new System.Drawing.Size(71, 18);
             this.lbl_totalFiles.TabIndex = 1;
+            this.lbl_totalFiles.Text = "共计N条";
             // 
             // lbl_completedFiles
             // 
             this.lbl_completedFiles.AutoSize = true;
-            this.lbl_completedFiles.Location = new System.Drawing.Point(323, 70);
+            this.lbl_completedFiles.Location = new System.Drawing.Point(443, 70);
             this.lbl_completedFiles.Name = "lbl_completedFiles";
-            this.lbl_completedFiles.Size = new System.Drawing.Size(0, 18);
+            this.lbl_completedFiles.Size = new System.Drawing.Size(89, 18);
             this.lbl_completedFiles.TabIndex = 2;
+            this.lbl_completedFiles.Text = "已完成N条";
             // 
             // BackgroundWorkForm
             // 
