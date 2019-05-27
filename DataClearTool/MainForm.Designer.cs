@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_dataPath = new System.Windows.Forms.Label();
             this.txt_dataPath = new System.Windows.Forms.TextBox();
             this.dtPicker_startDate = new System.Windows.Forms.DateTimePicker();
@@ -38,6 +39,7 @@
             this.lbl_diskSpace = new System.Windows.Forms.Label();
             this.lbl_diskSpaceVale = new System.Windows.Forms.Label();
             this.proBar_diskSpace = new System.Windows.Forms.ProgressBar();
+            this.timerDiskInfo = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // lbl_dataPath
@@ -108,25 +110,30 @@
             this.lbl_diskSpace.AutoSize = true;
             this.lbl_diskSpace.Location = new System.Drawing.Point(49, 293);
             this.lbl_diskSpace.Name = "lbl_diskSpace";
-            this.lbl_diskSpace.Size = new System.Drawing.Size(152, 18);
+            this.lbl_diskSpace.Size = new System.Drawing.Size(116, 18);
             this.lbl_diskSpace.TabIndex = 7;
-            this.lbl_diskSpace.Text = "工作盘剩余空间：";
+            this.lbl_diskSpace.Text = "工作盘空间：";
             // 
             // lbl_diskSpaceVale
             // 
             this.lbl_diskSpaceVale.AutoSize = true;
             this.lbl_diskSpaceVale.Location = new System.Drawing.Point(456, 293);
             this.lbl_diskSpaceVale.Name = "lbl_diskSpaceVale";
-            this.lbl_diskSpaceVale.Size = new System.Drawing.Size(35, 18);
+            this.lbl_diskSpaceVale.Size = new System.Drawing.Size(62, 18);
             this.lbl_diskSpaceVale.TabIndex = 8;
-            this.lbl_diskSpaceVale.Text = "N G";
+            this.lbl_diskSpaceVale.Text = "剩余NG";
             // 
             // proBar_diskSpace
             // 
-            this.proBar_diskSpace.Location = new System.Drawing.Point(198, 288);
+            this.proBar_diskSpace.Location = new System.Drawing.Point(171, 288);
             this.proBar_diskSpace.Name = "proBar_diskSpace";
-            this.proBar_diskSpace.Size = new System.Drawing.Size(252, 23);
+            this.proBar_diskSpace.Size = new System.Drawing.Size(279, 23);
             this.proBar_diskSpace.TabIndex = 9;
+            // 
+            // timerDiskInfo
+            // 
+            this.timerDiskInfo.Interval = 1000;
+            this.timerDiskInfo.Tick += new System.EventHandler(this.timerDiskInfo_Tick);
             // 
             // MainForm
             // 
@@ -165,6 +172,7 @@
         private System.Windows.Forms.Label lbl_diskSpace;
         private System.Windows.Forms.Label lbl_diskSpaceVale;
         private System.Windows.Forms.ProgressBar proBar_diskSpace;
+        private System.Windows.Forms.Timer timerDiskInfo;
     }
 }
 

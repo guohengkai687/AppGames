@@ -133,7 +133,7 @@ namespace DataClearTool
         {
             this.DialogResult = DialogResult.OK;
         }
-        private string conStr = "Data Source = localhost;Initial Catalog = mdr;User Id = sa;Password = bjdj;";
+        private string ConStr = "Data Source = localhost;Initial Catalog = mdr;User Id = sa;Password = bjdj;";
         /// <summary>
         /// 删除数据
         /// </summary>
@@ -142,7 +142,7 @@ namespace DataClearTool
         public int DeleteRecord(DateTime dt)
         {
             string sql = "delete from RecordSound where RTime between " + "'" + dt.ToString("yyyy-MM-dd") + "'" + " and " + "'" + dt.AddDays(1).ToString("yyyy-MM-dd") + "'";
-            SqlConnection connection = new SqlConnection(conStr);
+            SqlConnection connection = new SqlConnection(ConStr);
             try
             {
                 SqlCommand sqlCommand = connection.CreateCommand();
@@ -158,6 +158,7 @@ namespace DataClearTool
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print("数据库删除记录信息失败");
+                System.Diagnostics.Debug.Print(ex.ToString());
             }
             finally
             {
@@ -171,7 +172,7 @@ namespace DataClearTool
         /// <returns></returns>
         public int GetRecord(DateTime startDate, DateTime endDate)
         {
-            SqlConnection connection = new SqlConnection(conStr);
+            SqlConnection connection = new SqlConnection(ConStr);
             try
             {
                 DataSet ds = new DataSet();
@@ -183,6 +184,7 @@ namespace DataClearTool
             catch (Exception ex)
             {
                 System.Diagnostics.Debug.Print("数据库查询记录信息失败");
+                System.Diagnostics.Debug.Print(ex.ToString());
                 return -1;
             }
             finally
