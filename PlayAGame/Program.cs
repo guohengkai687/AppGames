@@ -9,34 +9,14 @@ namespace PlayAGame
 {
     class Program
     {
-        static unsafe void Main(string[] args)
+        static void Main(string[] args)
         {
-            //Player No3.
-
-            //Player No2.
-            string st1 = ResourceTest.ResourceManager.GetObject("ts1").ToString();
-            Console.Write(st1);
-            Console.ReadLine();
-
-            //Plyer No1.
-            int i = 2, j = 3;
-            Console.WriteLine(*Add(&i, &j));
-            Console.ReadLine();
-
+           
         }
-        public static unsafe int* Add(int* x, int* y)
-        {
-            int sum = *x + *y;
-            return &sum;
-        }
-    }
-
-    class GameNo1
-    {
         //序列化操作
         public static void SerializeMethod(List<Person> list)
         {
-            using (FileStream fs = new FileStream("序列化.btn",FileMode.Create))
+            using (FileStream fs = new FileStream("序列化.btn", FileMode.Create))
             {
                 BinaryFormatter bf = new BinaryFormatter();
                 bf.Serialize(fs, list);
@@ -54,7 +34,6 @@ namespace PlayAGame
                 return list;
             }
         }
-
     }
     class Person
     {

@@ -8,8 +8,8 @@
     <ProjectGuid>{44289E94-3201-471A-9E53-059775C0AEF0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PlayAGame</RootNamespace>
-    <AssemblyName>PlayAGame</AssemblyName>
+    <RootNamespace>ConsoleAppSerialize</RootNamespace>
+    <AssemblyName>ConsoleAppSerialize</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -76,7 +76,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LoadDataFromDb.cs" />
     <Compile Include="ResourceTest.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

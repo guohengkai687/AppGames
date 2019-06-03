@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PlayAGame {
+namespace ConsoleAppSerialize {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace PlayAGame {
         public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PlayAGame.ResourceTest", typeof(ResourceTest).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ConsoleAppSerialize.ResourceTest", typeof(ResourceTest).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
