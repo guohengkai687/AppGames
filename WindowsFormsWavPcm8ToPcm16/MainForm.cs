@@ -41,11 +41,11 @@ namespace WindowsFormsWavPcm8ToPcm16
             string _inPutPath = txtPath.Text.Trim();
             string _outPutPath = txtPath.Text + "output.wav";
             string _removeNoisePath = txtPath.Text + "removeNoise.wav";
-            //WavPcm8ToPcm16(_inPutPath, _outPutPath);
+            WavPcm8ToPcm16(_inPutPath, _outPutPath);
 
-            RemoveNoise(_outPutPath, _removeNoisePath);
+            //RemoveNoise(_outPutPath, _removeNoisePath);
 
-            this.Close();
+            //this.Close();
         }
 
         unsafe private void RemoveNoise(string fileNameInput, string fileNameOutPut)
